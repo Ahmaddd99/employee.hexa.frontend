@@ -9,10 +9,10 @@
                 <div class="mb-5 text-sm text-center px-2 font-semibold text-gray-950/60">Enter your email and password here</div>
                 <form @submit.prevent="authStore.login(form)">
                     <div class="mb-3">
-                        <input v-model="form.email" type="email" id="email" class="w-full outline-none py-3 px-4 text-sm rounded-3xl placeholder:text-lg" placeholder="Email" required>
+                        <input v-model="form.email" type="email" id="email" class="w-full outline-none py-3 px-4 text-sm rounded-3xl placeholder:text-lg placeholder:align-middle" placeholder="Email" required>
                     </div>
                     <div class="mb-3">
-                        <input v-model="form.password" type="password" id="password" class="w-full outline-none py-3 px-4 text-sm rounded-3xl placeholder:text-lg" placeholder="Password" required>
+                        <input v-model="form.password" type="password" id="password" class="w-full outline-none py-3 px-4 text-sm rounded-3xl placeholder:text-lg placeholder:align-middle" placeholder="Password" required>
                     </div>
                     <div class="w-full my-5">
                         <button type="submit" class="w-full text-lg font-bold bg-sky-400/80 text-white/80 py-3 rounded-full">Log in</button>

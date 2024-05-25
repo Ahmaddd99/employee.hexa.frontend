@@ -4,11 +4,13 @@ import { defineStore } from "pinia";
 export const useAuthStore = defineStore('auth', {
     state: () => ({
         userAuth: [], // bikin array kosong untuk menampung response login
-        checkAuth: false // untuk if condition route maupun permission
+        checkAuth: false, // untuk if condition route maupun permission
+        checkVerify: false
     }),
     getters: {
         user: (state) => state.userAuth,
-        auth: (state) => state.checkAuth
+        auth: (state) => state.checkAuth,
+        verify: (state) => state.checkVerify
     },
     actions: {
         async login ( data ) {

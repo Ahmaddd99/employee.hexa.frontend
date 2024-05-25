@@ -2,12 +2,14 @@ import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router
 import Auth from '../views/Auth.vue'
 import Dashboard from '../views/Dashboard.vue'
 import Pengguna from '../views/User.vue'
-import TFA from '../views/2FA.vue'
+import tfa from '../views/2FA.vue'
+import ManageView from '../views/Manage.vue'
 import Divisi from '../views/manageData/Divisi.vue'
 import KaryawanIndex from '../views/manageData/karyawan/Index.vue'
 import KaryawanCreate from '../views/manageData/karyawan/Create.vue'
 import KaryawanEdit from '../views/manageData/karyawan/Edit.vue'
 import Status from '../views/manageData/Status.vue'
+import { useAuthStore } from '@/stores/auth'
 
 
 const router = createRouter({
@@ -25,7 +27,7 @@ const router = createRouter({
     {
       path: '/2fa',
       name: "2fa",
-      component: TFA,
+      component: tfa ,
       meta: {
         title: "EMS | 2FA"
       }
@@ -37,6 +39,14 @@ const router = createRouter({
       meta: {
         title: "EMS | Dashboard"
       } 
+    },
+    {
+      path: '/manage',
+      name: 'manage',
+      component: ManageView,
+      meta: {
+        title: "EMS | Manage"
+      }
     },
     {
       path: '/manage/divisi/:id',
@@ -89,8 +99,15 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, from) => {
-  document.title = to.meta?.title ?? 'Vite App'
-})
+// router.beforeEach( async (to, from, next) => {
+//   const authStore = useAuthStore();
+//   if (!authStore.auth && to.name !== "login") {
+//     next( {name: "login"} )
+//   } else if (authStore.auth && !authStore.verify &&  to.name !== "2fa") {
+//     next( {name: "2fa"} )
+//   } else {
+//     next()
+//   }
+// })
 
 export default router

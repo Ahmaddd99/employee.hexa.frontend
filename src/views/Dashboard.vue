@@ -61,42 +61,41 @@ onMounted(
     
                     <div class="flex flex-col md:flex-row gap-6">
                         <!-- Table employee / divisi -->
-                        <div class="w-full flex flex-col gap-3">
-                            <div class="md:hidden px-2">
-                                <h2 class="text-sm font-medium text-black/80">Total Karyawan</h2>
-                                <p class="text-[10px] text-gray-950/40">Per divisi</p>
+                        <div class="w-full flex flex-col">
+                            
+                            <div class="flex justify-between items-center py-1 px-1 mb-2">
+                                <div class="px-2">
+                                    <h2 class="text-sm font-medium text-black/80">Total Karyawan</h2>
+                                    <p class="text-[10px] md:text-xs text-gray-950/40">Per divisi</p>
+                                </div>
+                                <RouterLink to="/manage/divisi/index">
+                                    <div class="font-semibold text-xs text-sky-500/80 border-b border-b-sky-500/80">Lihat Selengkapnya</div>
+                                </RouterLink>
                             </div>
                             <div class="w-full bg-white p-1 rounded-lg shadow-md">
-    
-                                <div class="hidden md:flex justify-between items-center py-1 px-1 mb-2">
-                                    <div class="font-semibold text-sm text-black/90">Divisi Karyawan</div>
-                                    <RouterLink to="/manage/divisi/index">
-                                        <div class="font-semibold text-xs text-sky-500/80 border-b border-b-sky-500/80">Lihat Selengkapnya</div>
-                                    </RouterLink>
-                                </div>
                                 
                                 <table class="w-full text-sm text-left text-gray-500">
                                     <thead class="collapse md:visible text-xs text-black/90 uppercase ">
                                         <tr>
-                                            <th class="block md:hidden px-3 py-3 w-1/12">Divisi</th>
-                                            <th class="md:px-6 py-3 w-8/12">Divisi</th>
-                                            <th class="px-6 py-3 text-center w-1/12">Jumlah</th>
+                                            <th class="block md:hidden px-3 py-3 w-1/12">x</th>
+                                            <th class="md:px-6 py-3 w-8/12 text-black/40">Divisi</th>
+                                            <th class="px-6 py-3 text-center w-1/12 text-black/40">Jumlah</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="bg-white w-full">
-                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/30x30" alt="" class="rounded-full object-center object-cover"></td>
-                                            <td class="md:px-6 py-4">Information Technology</td>
+                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/32x32" alt="" class=" size-8 rounded-full object-center object-cover"></td>
+                                            <td class="md:px-6 py-4 text-gray-900">Information Technology</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">3</td>
                                         </tr>
                                         <tr class="bg-white">
-                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/30x30" alt="" class="rounded-full object-center object-cover"></td>
-                                            <td class="md:px-6 py-4">Purcashing</td>
+                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/32x32" alt="" class=" size-8 rounded-full object-center object-cover"></td>
+                                            <td class="md:px-6 py-4 text-gray-900">Purcashing</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">5</td>
                                         </tr>
                                         <tr class="bg-white">
-                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/30x30" alt="" class="rounded-full object-center object-cover"></td>
-                                            <td class="md:px-6 py-4">Marketing Sales</td>
+                                            <td class="px-3 py-4 md:hidden block"><img src="http://placehold.it/32x32" alt="" class=" size-8 rounded-full object-center object-cover"></td>
+                                            <td class="md:px-6 py-4 text-gray-900">Marketing Sales</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">15</td>
                                         </tr>
                                     </tbody>
@@ -105,37 +104,35 @@ onMounted(
                         </div>
         
                         <!-- Table employee / status -->
-                        <div class="w-full flex flex-col gap-3">
-                            <div class="md:hidden px-2">
-                                <h2 class="text-sm font-medium text-black/80">Total Karyawan</h2>
-                                <p class="text-[10px] text-gray-950/40">Per status</p>
+                        <div class="w-full flex flex-col">
+                            <div class="flex justify-between items-center py-1 px-2.5 mb-2">
+                                <div class="">
+                                    <h2 class="text-sm font-medium text-black/80">Total Karyawan</h2>
+                                    <p class="text-[10px] md:text-xs text-gray-950/40">Per status</p>
+                                </div>
+                                <RouterLink :to="{ name : 'status.index'}">
+                                    <div class="font-semibold text-xs text-sky-500/80 border-b border-b-sky-500/80">Lihat Selengkapnya</div>
+                                </RouterLink>
                             </div>
                             <div class="w-full bg-white p-1 rounded-lg shadow-md">
-                                <div class="hidden md:flex justify-between items-center py-1 px-1 mb-2">
-                                    <div class="font-semibold text-sm text-black/90">Status Karyawan</div>
-                                    <RouterLink :to="{ name : 'status.index'}">
-                                        <div class="font-semibold text-xs text-sky-500/80 border-b border-b-sky-500/80">Lihat Selengkapnya</div>
-                                    </RouterLink>
-                                </div>
-                                
                                 <table class="w-full text-sm text-left text-gray-500">
                                     <thead class="collapse md:visible text-xs text-black/90 uppercase ">
                                         <tr>
-                                            <th class="px-6 py-3 w-2/3">Status</th>
-                                            <th class="px-6 py-3 text-center w-1/3">Jumlah</th>
+                                            <th class="px-6 py-3 w-2/3 text-black/40">Status</th>
+                                            <th class="px-6 py-3 text-center w-1/3 text-black/40">Jumlah</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr class="bg-white">
-                                            <td class="px-6 py-4">Kartap</td>
+                                            <td class="px-6 py-4 text-gray-900">Kartap</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">23</td>
                                         </tr>
                                         <tr class="bg-white">
-                                            <td class="px-6 py-4">Kontrak</td>
+                                            <td class="px-6 py-4 text-gray-900">Kontrak</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">3</td>
                                         </tr>
                                         <tr class="bg-white">
-                                            <td class="px-6 py-4">Percobaan</td>
+                                            <td class="px-6 py-4 text-gray-900">Percobaan</td>
                                             <td class="px-6 py-4 font-medium text-gray-900 text-center">1</td>
                                         </tr>
                                     </tbody>

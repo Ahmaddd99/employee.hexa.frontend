@@ -1,3 +1,3 @@
 <template>
-    <div>Status</div>
+    Divisi Index
 </template>

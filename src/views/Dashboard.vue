@@ -24,7 +24,7 @@ onMounted(
 )
 </script>
 <template>
-    <div class="md:hidden">
+    <!-- <div class="md:hidden">
         <div class="fixed w-full h-auto flex justify-center items-center py-4 px-4">
             <div @click="openModal" class="absolute left-3">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -36,6 +36,9 @@ onMounted(
             </div>
         </div>
         <SidebarMobile :isShow="modal" @close="closeModal" />
+    </div> -->
+    <div class="fixed md:hidden top-0 left-0 shadow-md bg-white/60 backdrop-blur-md w-full h-auto flex justify-center py-4">
+        Dashboard
     </div>
     
     <div class="flex w-full h-screen bg-gray-50">
@@ -61,7 +64,12 @@ onMounted(
                 <div class="flex flex-col md:flex-row gap-5">
                     <!-- Table employee / divisi -->
                     <div class="w-full bg-white p-1 rounded-lg shadow-md">
-                        <div class="py-1 px-1 mb-2 font-semibold text-sm text-black/90">Divisi Karyawan</div>
+                        <div class="flex justify-between items-center py-1 px-1 mb-2">
+                            <div class="font-semibold text-sm text-black/90">Divisi Karyawan</div>
+                            <RouterLink to="/manage/divisi/index">
+                                <div class="font-semibold text-xs text-sky-500/80 border-b border-b-sky-500/80">Lihat Selengkapnya</div>
+                            </RouterLink>
+                        </div>
                         
                         <table class="w-full text-sm text-left text-gray-500">
                             <thead class="text-xs text-black/90 uppercase bg-gray-100">

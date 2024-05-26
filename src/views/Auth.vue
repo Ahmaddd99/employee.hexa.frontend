@@ -2,13 +2,15 @@
     <div class="w-full h-screen bg-gray-50 overflow-hidden p-12">
         <div class="w-full h-full flex flex-col md:flex-row items-center justify-center gap-8">
             <div class="">
-                <img src="../assets/login.png" alt="" class=" size-80">
+                <img src="../assets/login.png" alt="" class=" size-80 object-cover object-center">
             </div>
             <div class="w-full md:w-1/3">
                 <h1 class="text-3xl font-bold text-gray-950/80 mb-4 text-center md:text-start">Sign In</h1>
                 <form @submit.prevent="authStore.login(form)">
                     <div class="mb-4">
-                        <input v-model="form.email" type="email" id="email" class="w-full outline-none p-3 text-sm rounded-lg placeholder:tracking-wide" placeholder="Email" required>
+                        <div class="w-full bg-white p-3 rounded-lg">
+                            <input v-model="form.email" type="email" id="email" class="w-full outline-none text-sm placeholder:tracking-wide" placeholder="Email" required>
+                        </div>
                     </div>
                     <div class="w-full mb-4">
                         <div class="w-full bg-white p-3 flex justify-between rounded-lg">

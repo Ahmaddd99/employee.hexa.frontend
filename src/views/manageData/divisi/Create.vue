@@ -1,3 +1,3 @@
 <template>
-    <div>Divisi</div>
+    Divisi Create
 </template>

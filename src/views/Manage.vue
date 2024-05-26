@@ -1,7 +1,7 @@
 <template>
-    <div class="w-full h-screen bg-gray-50 overflow-hidden flex flex-col justify-start items-center gap-16 p-4">
+    <div class="w-full h-screen bg-gray-50 overflow-hidden flex flex-col justify-start items-center gap-6 p-4">
         <div>
-            <div class="font-bold text-lg">Kelola Data</div>
+            <div class="font-medium text-sm">Kelola Data</div>
         </div>
         <div class="flex flex-col bg-white rounded-lg w-full">
             <RouterLink :to="{ name : 'divisi.index'}">

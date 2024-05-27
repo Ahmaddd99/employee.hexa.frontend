@@ -93,6 +93,6 @@ const logout = () => {
   transform: scale(1);
 }
 .scale-enter-active, .scale-leave-active {
-  transition: all 200ms ease;
+  transition: all 100ms ease;
 }
 </style>

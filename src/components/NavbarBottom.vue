@@ -53,11 +53,11 @@
     </div>
 
     <Transition name="scale">
-      <div v-if="modalLogout" class="fixed z-30 top-0 left-0 overflow-hidden w-full h-full flex items-center justify-center bg-black/0 backdrop-blur-xl">
+      <div v-if="modalLogout" class="fixed z-30 top-0 left-0 overflow-hidden w-full h-screen flex items-center justify-center bg-black/0 backdrop-blur-xl">
         <div class="w-10/12 h-auto bg-white rounded-3xl py-10 px-6 text-center shadow-xl">
           <div class="text-center mb-10">
             <div class="text-xl font-bold mb-4 text-gray-950/80">Keluar</div>
-            <div class="text-lg text-gray-950/40 px-10">
+            <div class="text-lg text-gray-950/40 px-4">
               Anda yakin ingin keluar dari halaman ini?
             </div>
           </div>
@@ -65,7 +65,7 @@
             <div @click="modalLogout = !modalLogout" class="text-sm px-6 py-4 text-red-700/80">
               Kembali
             </div>
-              <div @click="logout" class="border-2 border-black bg-sky-300 text-white/80 rounded-full px-4 py-3 text-sm font-medium">
+              <div @click="logout" class="border-2 border-black bg-sky-300 text-white/80 rounded-full px-6 py-3 text-sm font-medium">
                 Keluar
               </div>
           </div>
